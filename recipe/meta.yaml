@@ -15,7 +15,7 @@ source:
 
 build:
   skip: true  # [win and vc<14]
-  number: 201
+  number: 1201
   features:
     - blas_{{ variant }}
 
