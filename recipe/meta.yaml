@@ -15,7 +15,7 @@ source:
 
 build:
   skip: true  # [win and vc<14]
-  number: 1201
+  number: 1202
   features:
     - blas_{{ variant }}
 
@@ -26,11 +26,11 @@ requirements:
 
   host:
     - blas 1.1 {{ variant }}
-    - openblas 0.2.20|0.2.20.*
+    - openblas
 
   run:
     - blas 1.1 {{ variant }}
-    - openblas 0.2.20|0.2.20.*
+    - openblas
 
 test:
   source_files:
