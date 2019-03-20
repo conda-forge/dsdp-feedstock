@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 project (dsdp VERSION 5.8 LANGUAGES C)
 
 link_directories(${LIBRARY_PREFIX}/lib)
-find_library(BLAS_LIB blas)
+find_library(BLAS_LIB lapack)
 include_directories(include src/vecmat src/solver src/sdp)
 FILE (GLOB_RECURSE   SRCS   src/*.c)
 if(WIN32)
