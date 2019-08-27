@@ -16,10 +16,11 @@ build:
 
 requirements:
   build:
-    - cmake
     - {{ compiler("c") }}
 
   host:
+    - cmake
+    - make
     - libblas
     - libcblas
     - liblapack
