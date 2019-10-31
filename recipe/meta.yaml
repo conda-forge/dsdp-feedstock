@@ -18,7 +18,7 @@ requirements:
   build:
     - cmake
     - {{ compiler("c") }}
-
+    - make
   host:
     - libblas
     - libcblas
@@ -33,8 +33,6 @@ test:
     - dsdp5 bin/control1.dat-s   # [not win]
     - dsdp5 bin/mcp100.dat-s   # [not win]
     - dsdp5 bin/truss1.dat-s   # [not win]
-    - conda inspect linkages -p ${PREFIX} dsdp  # [not win]
-    - conda inspect objects -p ${PREFIX} dsdp  # [osx]
     - if not exist %LIBRARY_PREFIX%\\lib\\dsdp.lib exit 1    # [win]
     - if not exist %LIBRARY_PREFIX%\\bin\\dsdp.dll exit 1    # [win]
     - if not exist %LIBRARY_PREFIX%\\include\\dsdp5.h exit 1    # [win]
